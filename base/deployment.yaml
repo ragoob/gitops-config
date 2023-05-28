@@ -12,23 +12,23 @@ spec:
         app: sum-service
     spec:
       containers:
-        - name: sum-service
-          image: regoo707/sum-service
-          livenessProbe:
-            httpGet:
-              path: /heath
-              port: 3000
-            initialDelaySeconds: 3
-            periodSeconds: 3
-          readinessProbe:
-            httpGet:
-              path: /heath
-              port: 3000
-            initialDelaySeconds: 3
-            periodSeconds: 3
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
-          ports:
-            - containerPort: 3000
+      - name: sum-service
+        image: regoo707/sum-service
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
