@@ -4,4 +4,4 @@ bases:
 - ../../base
 images:
 - name: regoo707/sum-service
-  newTag: bbdb23a
+  newTag: 915962c
